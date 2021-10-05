@@ -7,13 +7,13 @@ if [ -z ${PROG} ]; then
 fi
 
 RES=$(${PROG} 2> /dev/null | grep temperature | cut -d ' ' -f 4)
-if [ -n ${RES} ]; then
+if [ "${RES}" = "" ]; then :; else
   echo ${RES}
   exit 0
 fi
 
 RES=$(${PROG} 2> /dev/null | cut -d ' ' -f 2 | cut -d : -f 2)
-if [ -n ${RES} ]; then
+if [ "${RES}" = "" ]; then :; else
   echo ${RES}
   exit 0
 fi
