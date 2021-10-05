@@ -1,1 +1,1 @@
-0 * * * * /bin/sh ${HOME}/thermometer/script/httpreport.sh ${HOME}/thermometer/debian/tempered myserver.somewhere lkjseidkkk
+0 * * * * /bin/sh ${HOME}/thermometer/usbrh/httpreport.sh myserver.somewhere RANDOMKEY
