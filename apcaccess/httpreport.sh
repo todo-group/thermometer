@@ -7,6 +7,6 @@ if [ -z ${RANDKEY} ]; then
   exit 127
 fi
 
-PROG="apcaccess"
+PROG="/sbin/apcaccess"
 RES=$(${PROG} 2> /dev/null | grep '^ITEMP' | awk '{print $3}')
 curl http://${SERVER}/${RANDKEY}/${RES} > /dev/null 2>&1
